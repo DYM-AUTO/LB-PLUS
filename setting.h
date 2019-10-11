@@ -100,6 +100,7 @@ extern struct PR_Power power;
 extern Ticker tickerSet;
 
 extern Adafruit_PWMServoDriver pwm;
+extern Adafruit_PWMServoDriver pwm2;
 
 // Объект для обновления с web страницы
 //extern ESP8266HTTPUpdateServer httpUpdater;

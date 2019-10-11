@@ -32,7 +32,8 @@
 #include "heater.h"
 #include <EEPROM.h>
 #include <time.h>
-#include "misc.h" 
+#include "misc.h"
+#include "rmvk.h" 
 
 // Заставка для TFT при старте
 const PROGMEM uint8_t imageDataStartScreen[24000] = {

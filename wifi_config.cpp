@@ -12,7 +12,7 @@ void initWifi() {
 
 #if defined Debug_en
 		Serial.print(i + 1);
-		Serial.print(" -> ");
+		.print(" -> ");
 		Serial.print(WiFi.SSID(i));
 		Serial.print(" (");
 		Serial.print(WiFi.RSSI(i));

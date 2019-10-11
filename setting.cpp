@@ -3,6 +3,7 @@
 Ticker tickerSet;
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+Adafruit_PWMServoDriver pwm2 = Adafruit_PWMServoDriver();
 
 // Объект для обновления с web страницы 
 //ESP8266HTTPUpdateServer httpUpdater;
@@ -13,7 +14,7 @@ ESP8266WebServer HTTP;
 // PID
 PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 
-String curVersion = "2.0RC18";
+String curVersion = "2.0RC18+RMVK+BUZZER";
 uint16_t versionForWeb = 2018;
 // Определяем переменные wifi
 String _ssid;      // Для хранения SSID

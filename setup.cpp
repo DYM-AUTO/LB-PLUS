@@ -34,7 +34,8 @@ void setup()
 	csOff(SD_CS);
 	csOff(TOUCH_CS);
 	setPWM(BUZ_VOL, 0, 650); //csOff(BUZ_VOL);
-	csOff(BUZ_OUT);
+	//csOff(BUZ_OUT);
+  initBuzzer(10);
 	pwmOut[0].invert = PWM_CH1_Invert;
 	pwmOut[1].invert = PWM_CH2_Invert;
 	pwmOut[2].invert = PWM_CH3_Invert;
@@ -60,7 +61,16 @@ void setup()
 	csOff(TFT_RES_PRG);
 	delay(2);
 
-	Serial.begin(115200);
+
+ Serial.begin(9600); //Скорость сериал порта
+  //********** CHANGE PIN FUNCTION  TO TX/RX **********
+  //GPIO 1 (TX) swap the pin to a TX.
+  pinMode(1, FUNCTION_0);
+  //GPIO 3 (RX) swap the pin to a RX.
+  pinMode(3, FUNCTION_0);
+  //***************************************************
+
+	//Serial.begin(115200);
 	//Serial.begin(38400);
 	Serial.println("");
 	Serial.println("");
