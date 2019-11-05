@@ -591,4 +591,6 @@ extern void tftStartLoop();
 extern void tftMenuLoop();
 extern void fillScreenRect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
 extern void outStopInfo();
+extern void drawScreen4bitMonoBitmap(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uint8_t *count);
+extern void drawBitmapString(uint16_t x, uint16_t y, const tImage *image, uint16_t color, uint16_t bgcolor);
 #endif

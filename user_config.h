@@ -3,8 +3,6 @@
 
 // ТЭН
 #define		heater			16
-// Если управление ТЭНом по COM порту - убрать комментарий следующей строки
-//#define		setHeater
 // Если PWM_CH6 включен весь процесс ректификации или дистилляции - убрать комментарий следующей строки
 //#define		Sign_of_Work
 // GPIO для I2C
@@ -76,5 +74,26 @@
 //#define		Pressure_BME280
 // Вывод отладочной информации в UART
 //#define		Debug_en
+
+//DYM AUTO
+#define   DYM_BUZ_ACT //если пищалка активная на плате на выходе 14
+#define   DYM_PR //если установлена плата клапанов DYM_AUTO
+#define   PWM2_CH1   1
+#define   PWM2_CH2   2
+#define   PWM2_CH3   3
+#define   PWM2_CH4   4
+#define   PWM2_CH5   5
+#define   PWM2_CH6   6
+#define   PWM2_CH7   7
+#define   PWM2_CH8   8
+#define   PWM2_CH9   9
+#define   PWM2_CH10   10
+#define   PWM2_CH11  11
+#define   PWM2_CH12  12
+#define   PWM2_CH13  13
+#define   PWM2_CH14  14
+#define   PWM2_CH15  15
+#define   PWM2_CH16  16
+
 
 #endif

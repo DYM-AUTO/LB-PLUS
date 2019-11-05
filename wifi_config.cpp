@@ -42,7 +42,7 @@ void initWifi() {
 			if (tmp_while % 2 == 0) {
 				// рисуем квадратики для индикации загрузки
 				scaleCount += 20;
-				if (scaleCount <= 282) tft.writeFillRect(scaleCount, 215, 15, 15, 0xFFFF);
+				if (scaleCount <= 282) tft.writeFillRect(scaleCount, 215, 15, 15, ILI9341_BLUE);
 			}
 #endif
 		}
