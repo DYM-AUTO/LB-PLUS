@@ -3,9 +3,6 @@
 
 // ТЭН
 #define		heater			16
-// Если управление ТЭНом по COM порту - убрать комментарий следующей строки
-//#define		setHeater
-#define   setRmvk
 // Если PWM_CH6 включен весь процесс ректификации или дистилляции - убрать комментарий следующей строки
 //#define		Sign_of_Work
 // GPIO для I2C
@@ -44,9 +41,7 @@
 #define		TOUCH_CS	12
 #define		BUZ_VOL		13
 #define		BUZ_OUT		14
-
 #define		SIREN_OUT	1       // Активная пищалка с внутренним генератором
-
 #define		PWM_CH1		11      // Клапан на головы
 #define		PWM_CH2		10      // Клапан на тело
 #define		PWM_CH3		9       // Клапан на воду
@@ -74,8 +69,8 @@
 #define		SD_out_temp	10
 // Какой используем датчик давления
 //#define		Pressure_BMP085
-//#define		Pressure_BMP180
-#define		Pressure_BMP280
+#define		Pressure_BMP180
+//#define		Pressure_BMP280
 //#define		Pressure_BME280
 // Вывод отладочной информации в UART
 //#define		Debug_en
@@ -99,5 +94,6 @@
 #define   PWM2_CH14  14
 #define   PWM2_CH15  15
 #define   PWM2_CH16  16
+
 
 #endif

@@ -9,14 +9,11 @@
 #endif
 
 #include "setting.h"
-#include "setting.h"
 
 extern float EEPROM_float_read(int addr);
 extern void EEPROM_float_write(int addr, float val);
 extern void stop_Err();
 extern void check_Err();
-extern void serialLoop();
-extern void serialLoopRmvk();
 extern void stepApLoop();
 
 #endif

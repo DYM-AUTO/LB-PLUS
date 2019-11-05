@@ -5,13 +5,13 @@ void initBuzzer(uint16_t duration)
   tickerSet.attach_ms(duration, deinitBuzzer);
 
 
-#if defined DYM_BUZ_ACT //если объявлена пищалка платы DYM активная то включаем ее на определенный период (duration) высоким уровнем
-  {
-    pwm.setPWM(BUZ_OUT, 4096, 0);
-  }
-#else
-  setPWM(BUZ_OUT, 0, 2048);
-#endif
+#if defined DYM_BUZ_ACT //если объявлена пищалка платы DYM активная то включаем ее на определенный период (duration) высоким уровнем //dym_
+  {                               //dym_
+    pwm.setPWM(BUZ_OUT, 4096, 0); //dym_
+  }                               //dym_ 
+#else                             //dym_
+  setPWM(BUZ_OUT, 0, 2048);       //dym_
+#endif                            //dym_
   // включить канал для сирены
   csOn(SIREN_OUT);
 }

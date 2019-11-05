@@ -8,6 +8,7 @@
 #endif
 
 #include "user_config.h"
+extern void serialLoopRmvk();
 extern int sendPowerRmvk(int strPower);   
 extern String sendATCommand(String cmd, bool waiting);       
 extern String waitResponse();

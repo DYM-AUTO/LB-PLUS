@@ -1,18 +1,29 @@
 #include "rmvk.h"
+#include "setting.h"
 
 String _response = "";
 int ten = 1;
 
+// передача мощности по UART
+void serialLoopRmvk() {
+  // отправим мощность для ТЕНа на внешнее устройство RMVK
+  if (RX_Pause <= millis() || powerSendOld != power.heaterPower)
+    sendPowerRmvk(power.heaterPower);
+  powerSendOld = power.heaterPower;
+  RX_Pause = millis() + 1000;
+}
+
 int sendPowerRmvk(int strPower)
 {
   int setpower = strPower * 2.3;
-  //Serial.println("%");
+  Serial.println("%");
   //Serial.println(strPower);
- // Serial.println(setpower);
-  if (strPower = 0) {
+  //Serial.println(setpower);
+  if (strPower <= 0) {
+     Serial.println("OFF HEAT!");
     sendATCommand("AT+VS=044", false);
     sendATCommand("AT+ON=0", false);
-    ten = 0; 
+    ten = 0;
     return 0;
   }
   else {
@@ -55,13 +66,13 @@ String waitResponse()                                             // Функц�
     if (millis() > _timeout )
     {
       Serial.println("Timeout...");
-       break;
+      break;
     }
 
     if (Serial.available())
     { _resp = Serial.readString();
       Serial.println(_resp);
-       break;
+      break;
     }
   }
   while (1) ;                                                     // Просто событие, которое не наступит
